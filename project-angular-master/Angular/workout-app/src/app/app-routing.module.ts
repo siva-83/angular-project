@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './addons/auth.guard';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
@@ -9,11 +10,11 @@ import { WorkoutsComponent } from './components/workouts/workouts.component';
 
 const routes: Routes = [
   {path: "login", component: LoginRegisterComponent},
-  {path: "", component: HomeComponent},
-  {path: "workouts", component: WorkoutsComponent},
-  {path: "about", component: AboutComponent},
-  {path: "contact", component: ContactComponent},
-  {path: "workouts/:id", component: WorkoutFullcardComponent}
+  {path: "", component: HomeComponent, canActivate: [AuthGuard]},
+  {path: "workouts", component: WorkoutsComponent, canActivate: [AuthGuard]},
+  {path: "about", component: AboutComponent, canActivate: [AuthGuard]},
+  {path: "contact", component: ContactComponent, canActivate: [AuthGuard]},
+  {path: "workouts/:id", component: WorkoutFullcardComponent, canActivate: [AuthGuard]}
 ];
 
 @NgModule({

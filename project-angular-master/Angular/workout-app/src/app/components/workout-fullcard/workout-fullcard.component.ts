@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { FetchWorkoutService } from 'src/app/services/fetch-workout.service';
+// import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 @Component({
   selector: 'app-workout-fullcard',

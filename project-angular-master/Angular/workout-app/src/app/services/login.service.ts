@@ -28,7 +28,7 @@ export class LoginService {
   logout(){
     this.authenticated = false
     this.authStatusListener.next(this.authenticated);
-    this.router.navigate([''])
+    this.router.navigate(['login'])
   }
 
   authenticate(user : users){
