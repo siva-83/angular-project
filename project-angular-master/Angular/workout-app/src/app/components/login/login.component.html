@@ -1,0 +1,12 @@
+<h1 class='title'>Login Form</h1>
+<form class='form-card' autoComplete='off'>
+    <div class='input-card'>
+        <label class='label' for="email">Email Address</label>
+        <input placeholder='Enter email' #email name="email" class='form-control' type="text" id="email"/>
+    </div>
+    <div class='input-card'>
+        <label class='label' for="password">Password</label>
+        <input placeholder='Enter password' #password name="password" class='form-control' type="password" id="password"/>
+    </div>
+    <button class='button' type="button" (click)="submit(email.value,password.value)">Login</button>
+</form>
